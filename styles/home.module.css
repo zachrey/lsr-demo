@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.logo {
+  height: 64px;
+  width: 64px;
+}

@@ -60,7 +60,7 @@ export default function UploadForm({ handleSubmit }) {
           ]}
         >
           <Select>
-            {subjects.map(name => <Select.Option value={name}>{name}</Select.Option>)}
+            {subjects.map(name => <Select.Option value={name} key={name}>{name}</Select.Option>)}
           </Select>
         </Form.Item>
 

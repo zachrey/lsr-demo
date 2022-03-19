@@ -13,6 +13,7 @@ export default function ImagePreview (props: ImagesPreViewProps) {
     <div className={classnames['title']}>
       <span className={classnames['title-content']}>视频预览</span>
       <Image
+        alt="展示视频"
         width={400}
         height={400}
         src={props.url || "error"}

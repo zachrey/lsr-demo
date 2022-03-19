@@ -33,3 +33,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# uploads 里面的文件不需要上传
+/uploads/*

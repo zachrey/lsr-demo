@@ -1,0 +1,14 @@
+.upload-form {
+  width: 660px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-content {
+  margin-bottom: 30px;
+  font-size: 18px;
+}

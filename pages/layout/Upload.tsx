@@ -26,6 +26,7 @@ export default function UploadLayout() {
   }
   return (
     <>
+      <div style={{ fontSize: 20, marginLeft: 14 }}> 上传教学视频</div>
       <div className={classnames['upload-container']}>
         <UploadForm handleSubmit={handleSubmit} />
         <ImagePreview url={url} />

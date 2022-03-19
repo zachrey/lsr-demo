@@ -21,7 +21,7 @@ export default function App() {
     setCollapsed(collapsed);
   };
 
-  const [curMenuKey, setCurMenuKey] = useState(MenuKey.UPLOAD_VIDEO);
+  const [curMenuKey, setCurMenuKey] = useState(MenuKey.ENGAGEMENT_ANALYSIS);
 
   const renderMenu = () => <Menu theme="dark" defaultSelectedKeys={[curMenuKey]} mode="inline">
     {
@@ -50,7 +50,7 @@ export default function App() {
             {HeaderTitle}
           </Header>
           <HomeView curContentKey={curMenuKey} />
-          <Footer style={{ textAlign: 'center' }}>LSR</Footer>
+          <Footer style={{ textAlign: "center" }}>LSR-HAHA</Footer>
         </Layout>
       </Layout>
     </div>

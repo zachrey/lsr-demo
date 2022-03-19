@@ -3,6 +3,7 @@ import { Content } from 'antd/lib/layout/layout';
 import { MenuKey } from 'pages/common/constant';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import classnames from 'styles/home.module.css';
+import Analysis from './Analysis';
 import UploadLayout from './Upload';
 
 interface HomeProps {
@@ -10,8 +11,8 @@ interface HomeProps {
 }
 
 const MenukeyMap = {
-  [MenuKey.UPLOAD_VIDEO]: () => <UploadLayout />,
-  [MenuKey.ENGAGEMENT_ANALYSIS]: () => <div>分析</div>
+  [MenuKey.UPLOAD_VIDEO]: UploadLayout,
+  [MenuKey.ENGAGEMENT_ANALYSIS]: Analysis,
 };
 
 export default function Home(props: HomeProps) {
@@ -19,7 +20,7 @@ export default function Home(props: HomeProps) {
   return (
     <div className={classnames.content}>
       <HashRouter>
-        <Content style={{ margin: '0 16px' }}>
+        <Content style={{ margin: '0 16px', background: "white", padding: '10px', marginTop: 10 }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             {/* <Breadcrumb.Item>User</Breadcrumb.Item>
             <Breadcrumb.Item>Bill</Breadcrumb.Item> */}

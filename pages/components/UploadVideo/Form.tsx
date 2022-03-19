@@ -2,8 +2,7 @@ import React from 'react';
 import { Form, Input, Button, Checkbox, Select, DatePicker, Upload, message } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import classnames from './index.module.css'
-
-const subjects = ["语文", "数学", "英语", "科学", "生物", "音乐"];
+import { subjects, teachers } from 'pages/mock/mockData';
 
 export default function UploadForm({ handleSubmit }) {
   const onFinish = (values) => {
@@ -65,6 +64,7 @@ export default function UploadForm({ handleSubmit }) {
         </Form.Item>
 
         <Form.Item
+        
           label="授课教师"
           name="teacher"
           rules={[
@@ -74,7 +74,9 @@ export default function UploadForm({ handleSubmit }) {
             },
           ]}
         >
-          <Input />
+          <Select>
+            {teachers.map(name => <Select.Option value={name} key={name}>{name}</Select.Option>)}
+          </Select>
         </Form.Item>
 
         <Form.Item

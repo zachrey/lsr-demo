@@ -4,6 +4,7 @@ import { MenuKey } from 'common/constant';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import classnames from 'styles/home.module.css';
 import Analysis from './Analysis';
+import TeacherInfo from './TeacherInfo';
 import UploadLayout from './Upload';
 import Videos from './Videos';
 
@@ -15,12 +16,11 @@ const MenuKeyMap = {
   [MenuKey.UPLOAD_VIDEO]: UploadLayout,
   [MenuKey.ENGAGEMENT_ANALYSIS]: Analysis,
   [MenuKey.VIDEOS]: Videos,
-  [MenuKey.CLASSROOM_EVALUATE]: () => <div>待开发</div>,
-  [MenuKey.SETTING]: () => <div>待开发</div>,
+  [MenuKey.TEACHER_INFO]: TeacherInfo,
 };
 
 export default function Home(props: HomeProps) {
-  const ContentComp = MenuKeyMap[props.curContentKey];
+  const ContentComp = MenuKeyMap[props.curContentKey] || <div>待开发</div>;
   return (
     <div className={classnames.content}>
       <HashRouter>

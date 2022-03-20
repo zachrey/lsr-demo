@@ -21,7 +21,7 @@ export default function App() {
     setCollapsed(collapsed);
   };
 
-  const [curMenuKey, setCurMenuKey] = useState(MenuKey.ENGAGEMENT_ANALYSIS);
+  const [curMenuKey, setCurMenuKey] = useState(MenuKey.TEACHER_INFO);
 
   const renderMenu = () => <Menu theme="dark" defaultSelectedKeys={[curMenuKey]} mode="inline">
     {

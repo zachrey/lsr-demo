@@ -11,14 +11,16 @@ interface HomeProps {
   curContentKey: MenuKey;
 }
 
-const MenukeyMap = {
+const MenuKeyMap = {
   [MenuKey.UPLOAD_VIDEO]: UploadLayout,
   [MenuKey.ENGAGEMENT_ANALYSIS]: Analysis,
   [MenuKey.VIDEOS]: Videos,
+  [MenuKey.CLASSROOM_EVALUATE]: () => <div>待开发</div>,
+  [MenuKey.SETTING]: () => <div>待开发</div>,
 };
 
 export default function Home(props: HomeProps) {
-  const ContentComp = MenukeyMap[props.curContentKey];
+  const ContentComp = MenuKeyMap[props.curContentKey];
   return (
     <div className={classnames.content}>
       <HashRouter>

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import classnames from 'styles/upload_layout.module.css';
 import { CaretRightOutlined } from '@ant-design/icons';
 import Button from 'antd/lib/button';
-import { Progress } from 'antd';
+import { message, Progress } from 'antd';
 import { setTimeout } from 'timers';
 import images from 'utils/mock/images';
 
@@ -18,6 +18,10 @@ export default function UploadLayout() {
   }
 
   const startCompute = () => {
+    if (!url) {
+      message.error(`请先上传视频`);
+      return;
+    }
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);

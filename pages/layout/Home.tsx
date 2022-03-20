@@ -1,6 +1,6 @@
 import { Breadcrumb } from 'antd';
 import { Content } from 'antd/lib/layout/layout';
-import { MenuKey } from 'pages/common/constant';
+import { MenuKey } from 'common/constant';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import classnames from 'styles/home.module.css';
 import Analysis from './Analysis';

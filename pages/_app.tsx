@@ -6,7 +6,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { useState } from 'react';
-import { HeaderTitle, LayoutLeftMenu, MenuKey } from './common/constant';
+import { HeaderTitle, LayoutLeftMenu, MenuKey } from '../common/constant';
 import classnames from 'styles/home.module.css';
 import dynamic from "next/dynamic";
 const HomeView = dynamic(()=>import('./layout/Home'),{ ssr: false });

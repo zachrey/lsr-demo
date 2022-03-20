@@ -10,7 +10,7 @@ const data = genTableData();
 export default function TeacherInfo() {
   const [sourceData, setSourceData] = useState<{subjects: string[], teacher: string, id?: string}>({
     teacher: teachers[Math.floor(Math.random() * teachers.length)],
-    subjects: [subjects[Math.floor(Math.random() * subjects.length)], subjects[Math.floor(Math.random() * subjects.length)]],
+    subjects: data.map(item => item.teacher === teachers[Math.floor(Math.random() * teachers.length)] ? item.subject : undefined).filter(i => i),
   });
 
   const [form] = Form.useForm();
@@ -61,7 +61,7 @@ export default function TeacherInfo() {
 
   return (
     <>
-      <div style={{ fontSize: 20, marginLeft: 14 }}>视频列表</div>
+      <div style={{ fontSize: 20, marginLeft: 14 }}>教师画像</div>
       <div style={{ margin: 30, display: 'flex', justifyContent: 'space-around' }}>
         <Filter />
       </div>

@@ -87,7 +87,9 @@ export default function Info({ data }: { data?: {teacher?: string, id?: string, 
       <div>{`科目: `}
         {(() => <>
           <Tag color="success">{data.subjects[Math.floor(Math.random() * data.subjects.length)]}</Tag>
-          <Tag color="success">{data.subjects[Math.floor(Math.random() * data.subjects.length)]}</Tag>
+          <Tag color="success">{
+            data.subjects[Math.floor(Math.random() * data.subjects.length === 0 ? Math.random() * data.subjects.length - 1 : 1)]
+          }</Tag>
         </>
         )()}
       </div>

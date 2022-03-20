@@ -1,6 +1,6 @@
 import { Button, Form, Select } from "antd";
 import Table from "pages/components/Analysis/Table";
-import { genTableData, ids, subjects, teachers } from "pages/mock/mockData";
+import { genTableData, ids, subjects, teachers } from "utils/mock/mockData";
 import React, { useState } from "react";
 // import { useState } from 'react';
 import { DatePicker } from 'antd';
@@ -88,7 +88,7 @@ export default function Analysis() {
   return (
     <>
       <div style={{ fontSize: 20, marginLeft: 14 }}>投入度分析</div>
-      <div style={{ marginBottom: 30, display: 'flex', justifyContent: 'space-around' }}>
+      <div style={{ margin: 30, display: 'flex', justifyContent: 'space-around' }}>
         <Filter />
       </div>
       <div className={classnames['container']}>

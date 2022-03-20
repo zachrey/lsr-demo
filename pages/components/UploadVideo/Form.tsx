@@ -1,8 +1,8 @@
 import React from 'react';
-import { Form, Input, Button, Checkbox, Select, DatePicker, Upload, message } from 'antd';
+import { Form, Button, Select, DatePicker, Upload, message } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import classnames from './index.module.css'
-import { subjects, teachers } from 'pages/mock/mockData';
+import { subjects, teachers } from 'utils/mock/mockData';
 
 export default function UploadForm({ handleSubmit }) {
   const onFinish = (values) => {

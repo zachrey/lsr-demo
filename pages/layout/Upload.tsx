@@ -4,9 +4,9 @@ import { useState } from 'react';
 import classnames from 'styles/upload_layout.module.css';
 import { CaretRightOutlined } from '@ant-design/icons';
 import Button from 'antd/lib/button';
-import images from 'pages/components/UploadVideo/images';
 import { Progress } from 'antd';
 import { setTimeout } from 'timers';
+import images from 'utils/mock/images';
 
 export default function UploadLayout() {
   const [url, setUrl] = useState<string>();

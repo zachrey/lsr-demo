@@ -16,8 +16,6 @@ const LineCharts: React.FC<{ data: any }> = ({ data }) => {
 
   const sortKey = Object.keys(date).sort((a, b) => moment(a).isBefore(b) ? -1 : 1);
 
-  console.log('@@ sortKey: ', sortKey);
-
   const lineData = sortKey.map((key: string) => {
     if (date[key] && !date[key].length) {
       return {};

@@ -5,6 +5,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import classnames from 'styles/home.module.css';
 import Analysis from './Analysis';
 import UploadLayout from './Upload';
+import Videos from './Videos';
 
 interface HomeProps {
   curContentKey: MenuKey;
@@ -13,6 +14,7 @@ interface HomeProps {
 const MenukeyMap = {
   [MenuKey.UPLOAD_VIDEO]: UploadLayout,
   [MenuKey.ENGAGEMENT_ANALYSIS]: Analysis,
+  [MenuKey.VIDEOS]: Videos,
 };
 
 export default function Home(props: HomeProps) {

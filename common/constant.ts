@@ -2,6 +2,7 @@ export enum MenuKey {
   CLASSROOM_ENGAGEMENT_ANALYSIS = 'classroom_engagement_analysis',
   UPLOAD_VIDEO = 'upload_video',
   ENGAGEMENT_ANALYSIS = 'engagement_analysis',
+  VIDEOS = 'videos',
   CLASSROOM_EVALUATE = 'classroom_evaluate',
   SETTING = 'setting',
 };
@@ -21,6 +22,9 @@ export const LayoutLeftMenu = [
     }, {
       key: MenuKey.ENGAGEMENT_ANALYSIS,
       title: '投入度分析',
+    }, {
+      key: MenuKey.VIDEOS,
+      title: '视频列表',
     }]
   },
   {
